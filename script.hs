@@ -13,6 +13,14 @@ calcularSoma xs = sum xs
 calcularMedia :: [Double] -> Double
 calcularMedia xs = calcularSoma xs / fromIntegral (length xs)
 
+-- Função para encontrar o maior valor da lista
+obterMaior :: [Double] -> Double
+obterMaior xs = maximum xs
+
+-- Função para encontrar o menor valor da lista
+obterMenor :: [Double] -> Double
+obterMenor xs = minimum xs
+
 -- funcao principal
 main :: IO ()
 
@@ -37,5 +45,7 @@ main = do
             putStrLn "\n--- Resultados ---"
             putStrLn ("Soma: " ++ show (calcularSoma listaNumeros))
             putStrLn ("Média: " ++ show (calcularMedia listaNumeros))
+            putStrLn ("Maior Valor: " ++ show (obterMaior listaNumeros))
+            putStrLn ("Menor Valor: " ++ show (obterMenor listaNumeros))
 
             putStrLn $ "Lista de numeros: " ++ show listaNumeros
