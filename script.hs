@@ -21,6 +21,10 @@ obterMaior xs = maximum xs
 obterMenor :: [Double] -> Double
 obterMenor xs = minimum xs
 
+-- Função para contar a quantidade de elementos na lista
+contarElementos :: [Double] -> Int
+contarElementos xs = length xs
+
 -- funcao principal
 main :: IO ()
 
@@ -43,9 +47,9 @@ main = do
 
             -- Aqui coloco as funcoes que calculam a soma e a media da lista de numeros
             putStrLn "\n--- Resultados ---"
-            putStrLn ("Soma: " ++ show (calcularSoma listaNumeros))
-            putStrLn ("Média: " ++ show (calcularMedia listaNumeros))
-            putStrLn ("Maior Valor: " ++ show (obterMaior listaNumeros))
-            putStrLn ("Menor Valor: " ++ show (obterMenor listaNumeros))
-
-            putStrLn $ "Lista de numeros: " ++ show listaNumeros
+            putStrLn $ "0. Lista de numeros: " ++ show listaNumeros
+            putStrLn ("1. Soma: " ++ show (calcularSoma listaNumeros))
+            putStrLn ("2. Média: " ++ show (calcularMedia listaNumeros))
+            putStrLn ("3. Maior Valor: " ++ show (obterMaior listaNumeros))
+            putStrLn ("4. Menor Valor: " ++ show (obterMenor listaNumeros))
+            putStrLn ("5. Quantidade de elementos   : " ++ show (contarElementos listaNumeros))
